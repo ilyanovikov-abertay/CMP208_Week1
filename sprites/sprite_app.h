@@ -46,13 +46,12 @@ private:
 	std::vector<float> speedXYZ;
 	std::vector<float> sprite2_speedXYZ;
 
-	
-	//char hex[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
-	//std::string colour_hex = "0xff";
-	//char alpha[2];
-	//char red[2];
-	//char green[2];
-	//char blue[2];
+	int alpha;
+	int blue;
+	int green;
+	int red;
+
+	int colour_hex;
 
 };
 
