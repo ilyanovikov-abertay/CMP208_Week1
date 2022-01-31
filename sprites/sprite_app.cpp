@@ -104,16 +104,14 @@ bool SpriteApp::Update(float frame_time)
 	sprite_generator[instance].set_width(rand() % 100 + 1);
 	sprite_generator[instance].set_height(rand() % 100 + 1);
 	
-	//for (int i = 0; i < 2; i++)
-	//{
-	//	blue[i] = hex[rand() % 16];
-	//	green[i] = hex[rand() % 16];
-	//	red[i] = hex[rand() % 16];
-	//}
-	//
-	//colour_hex += blue[0] + blue[1] + green[0] + green[1] + red[0] + red[1];
+	alpha = rand() % 256;
+	blue = rand() % 256;
+	green = rand() % 256;
+	red = rand() % 256;
+	
+	colour_hex = (alpha << 24) + (blue << 16) | (green << 8) | (red);
 
-	//sprite_generator[instance].set_colour(std::atoi(colour_hex.c_str()));
+	sprite_generator[instance].set_colour(colour_hex);
 
 	//Set position in range from -16.0f to 950 for X and in range from -16.0f to 528 for Y
 	//*Based on previous testings the object is rendered from the centre instead of left right corner 
