@@ -1,3 +1,5 @@
+#define PI 3.14159265358979323846 //pi
+
 #include "sprite_app.h"
 #include <system/platform.h>
 #include <graphics/sprite_renderer.h>
@@ -125,6 +127,9 @@ bool SpriteApp::Update(float frame_time)
 		sprite_generator[instance].set_position(rand() % platform_.width() - sprite_generator[instance].width() / 2.0f, rand() % platform_.height() - sprite_generator[instance].height() / 2.0f, 0.0f);
 	}
 
+	float divider = rand() % 10 + 1;
+	sprite_generator[instance].set_rotation(PI/divider);
+		
 	instance++;
 	spawnTimer = 0;
 	}
