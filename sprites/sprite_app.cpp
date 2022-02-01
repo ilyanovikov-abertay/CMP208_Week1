@@ -109,9 +109,10 @@ bool SpriteApp::Update(float frame_time)
 	green = rand() % 256;
 	red = rand() % 256;
 	
-	colour_hex = (alpha << 24) + (blue << 16) | (green << 8) | (red);
+	//colour_hex = (alpha << 24) | (blue << 16) | (green << 8) | (red);
+	//sprite_generator[instance].set_colour(colour_hex);
 
-	sprite_generator[instance].set_colour(colour_hex);
+	sprite_generator[instance].set_colourRGBA(255, 0, 0, 255);
 
 	//Set position in range from -16.0f to 950 for X and in range from -16.0f to 528 for Y
 	//*Based on previous testings the object is rendered from the centre instead of left right corner 
